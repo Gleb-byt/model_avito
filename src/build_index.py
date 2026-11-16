@@ -34,7 +34,7 @@ class VectorKnowledgeBase:
     def build_from_pairs(
         self,
         train_pairs_path: str = "data/processed/train_pairs.jsonl",
-        deduplicate_by_intent: bool = False,
+        deduplicate_by_intent: bool = True,
     ):
         """
         Extracts answer knowledge passages, encodes them, and adds them to FAISS
