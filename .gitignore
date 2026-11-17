@@ -1,3 +1,5 @@
-.instructions.md
+instructions.md
 ./adapters/qwen_lora/*
 .venv
+.env
+src/__pycache__

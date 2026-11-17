@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package inference.v1;
+
+option go_package = "avito-api/internal/gen/inference/v1;inferencev1";
+
+service Inference {
+  // Chat стримит токены ответа модели.
+  rpc Chat(ChatRequest) returns (stream ChatResponse);
+}
+
+message ChatMessage {
+  string role = 1; // "user" | "assistant"
+  string content = 2;
+}
+
+message ChatRequest {
+  string model = 1;
+  repeated ChatMessage messages = 2;
+}
+
+message ChatResponse {
+  string token = 1;
+  bool done = 2;
+  string finish_reason = 3; // "stop" | "length" | "error"
+}

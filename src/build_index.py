@@ -132,7 +132,6 @@ class VectorKnowledgeBase:
 if __name__ == "__main__":
     kb = VectorKnowledgeBase(model_name="intfloat/multilingual-e5-small")
     kb.build_from_pairs("data/processed/train_pairs.jsonl")
-    # Quick test query
     test_query = "С чего мне начать стажировку в компании?"
     hits = kb.search(test_query, top_k=2)
     print(f"\nTest Query: {test_query}\nTop results:")

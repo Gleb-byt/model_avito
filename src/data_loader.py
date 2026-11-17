@@ -3,7 +3,7 @@ import random
 from pathlib import Path
 from typing import Dict, List, Any
 
-DEFAULT_SYSTEM_PROMT = (
+DEFAULT_SYSTEM_PROMPT = (
     "Ты — виртуальный ассистент по адаптации новых сотрудников Авито. "
     "Отвечай вежливо, структурированно и строго следуй предоставленной информации."
 )
@@ -29,7 +29,7 @@ def prepare_dataset(
     val_ratio: float = 0.1,
     group_by_intent: bool = False,
     seed: int = 42,
-    system_prompt: str = DEFAULT_SYSTEM_PROMT,
+    system_prompt: str = DEFAULT_SYSTEM_PROMPT,
 ):
     """
     This function merges two files and creates one .jsonl train/val splits
